@@ -1,8 +1,16 @@
 name "metasploit-framework"
+
+$stderr.puts "[debug] is_windows?#{windows?} linux?=#{linux?}"
+
 if linux? && File.exist?("/metasploit-framework")
   # supply current version of metasploit-framework at root of filesystem
   source path: "/metasploit-framework"
+elsif windows? && File.exist?('D:/a/metasploit-omnibus/metasploit-framework')
+  $stderr.puts "[debug] using D:/a/metasploit-omnibus/metasploit-framework"
+  # supply current version of metasploit-framework at C drive filesystem
+  source path: "D:/a/metasploit-omnibus/metasploit-framework"
 else
+  $stderr.puts "[debug] using git clone"
   source git: "https://github.com/rapid7/metasploit-framework.git"
   default_version "master"
 end
