@@ -40,7 +40,7 @@ else
   version "2.6.1-1" do
     source sha256: "3f637d73092d3004fb1cee2d7047949aad3880042879d8de55bf661a399f06fc"
   end
-  version "2.6.5-1" do
+  version "3.1.4-1" do
     source sha256: "9b1866e59fe1e7336c4e3231823ff24e121878ed1bac8194ad3fe5e9f2f9ef69"
   end
   version "2.6.6-1" do
